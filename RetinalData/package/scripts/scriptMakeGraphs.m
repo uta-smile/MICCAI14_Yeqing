@@ -67,7 +67,8 @@ grid;
 legend({'DDVT', 'Proposed', 'TLD grad' 'SCV [11]','MI [6]','SSD'},'fontsize',14,'location','SouthEast');
 set(gca,'fontsize',16) 
 
-title('  Exp 2a  ','fontsize',20,'fontweight','b');
+% title('  Exp 2a  ','fontsize',20,'fontweight','b');
+title('  Seq 1  ','fontsize',20,'fontweight','b');
 
 print('exp2a.tiff','-dtiffn');
 
@@ -94,7 +95,8 @@ TLD_Hist2{2} = TLD_Hist2{2} /(TLD_Hist2{2}*F');
 figure;
 % bar([Hist1{2}(1:10);TLD_Hist1{2}(1:10);TLD_Hist1_mf{2}(1:10); MI_vec(1:10)]');
 bar([Hist1{2}(1:10);TLD_Hist1{2}(1:10);TLD_Hist2{2}(1:10)]');
-title('  Exp 2a  ','fontsize',20,'fontweight','b');
+% title('  Exp 2a  ','fontsize',20,'fontweight','b');
+title('  Seq 1  ','fontsize',20,'fontweight','b');
 
 xlim([0 10])
 % ylim([0 .7])
@@ -107,13 +109,13 @@ legend({'DDVT','Proposed','TLD grad', 'MI'},'fontsize',14,'location','NorthEast'
 set(gca,'fontsize',16) 
 % print('hist1_cons.tiff','-dtiffn');
 
-return
+% return
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 [M_Acc2 M_Thr2 Hist1] =  computeAccuracySigmaCurve(fullfile(rtpath, 'exp_test2.txt'), ...
-                 fullfile(rtpath, 'test2.txt'),...
+                 fullfile(gtpath, 'test2.txt'),...
                  -1,...
                  -1);
              
@@ -121,7 +123,7 @@ figure;
 plot(M_Thr2,M_Acc2,'-bd','LineWidth',1.5);                                  
 
 [TLD_Acc1 TLD_Thr1 TLD_Hist1] =  computeAccuracySigmaCurve(fullfile(tldrtpath, 'seq2_tld_test_best.txt'), ...
-                 fullfile(rtpath, 'test2.txt'),...
+                 fullfile(gtpath, 'test2.txt'),...
                  -1,...
                  -1);
              
@@ -166,7 +168,8 @@ grid;
 legend({'DDVT', 'Proposed', 'TLD mf' 'SCV [11]','MI [6]','SSD'},'fontsize',14,'location','SouthEast');
 set(gca,'fontsize',16) 
 
-title('  Exp 2b  ','fontsize',20,'fontweight','b');
+% title('  Exp 2b  ','fontsize',20,'fontweight','b');
+title('  Seq 2  ','fontsize',20,'fontweight','b');
 
 print('exp2b.tiff','-dtiffn');
 
@@ -181,7 +184,8 @@ TLD_Hist1{2} = TLD_Hist1{2} /(TLD_Hist1{2}*F');
 figure;
 % bar([Hist1{2}(1:10);TLD_Hist1{2}(1:10);TLD_Hist1_mf{2}(1:10); MI_vec(1:10)]');
 bar([Hist1{2}(1:10);TLD_Hist1{2}(1:10)]');
-title('  Exp 2b  ','fontsize',20,'fontweight','b');
+% title('  Exp 2b  ','fontsize',20,'fontweight','b');
+title('  Seq 2  ','fontsize',20,'fontweight','b');
 
 xlim([0 10])
 ylim([0 .7])
@@ -199,7 +203,7 @@ set(gca,'fontsize',16)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
              
 [M_Acc3 M_Thr3 Hist1] =  computeAccuracySigmaCurve(fullfile(rtpath, 'exp_test3.txt'), ...
-                 fullfile(rtpath, 'test3.txt'),...
+                 fullfile(gtpath, 'test3.txt'),...
                  -1,...
                  -1);
              
@@ -207,7 +211,7 @@ figure;
 plot(M_Thr3,M_Acc3,'-bd','LineWidth',1.5);   
 
 [TLD_Acc1 TLD_Thr1 TLD_Hist1] =  computeAccuracySigmaCurve(fullfile(tldrtpath, 'seq3_tld_test_best.txt'), ...
-                 fullfile(rtpath, 'test3.txt'),...
+                 fullfile(gtpath, 'test3.txt'),...
                  -1,...
                  -1);
              
@@ -215,7 +219,7 @@ hold on;
 plot(TLD_Thr1,TLD_Acc1,'-rv','LineWidth',1.5); 
              
 [TLD_Acc1 TLD_Thr1 TLD_Hist1_mf] =  computeAccuracySigmaCurve(fullfile(tldrtpath, 'seq3_tld_test_mf.txt'), ...
-                 fullfile(rtpath, 'test3.txt'),...
+                 fullfile(gtpath, 'test3.txt'),...
                  -1,...
                  -1);
              
@@ -251,7 +255,8 @@ grid;
 legend({'DDVT','Proposed', 'TLD mf', 'SCV [11]','MI [6]','SSD'},'fontsize',14,'location','SouthEast');
 set(gca,'fontsize',16) 
 
-title('  Exp 2c  ','fontsize',20,'fontweight','b');
+% title('  Exp 2c  ','fontsize',20,'fontweight','b');
+title('  Seq 3  ','fontsize',20,'fontweight','b');
 
 print('exp2c.tiff','-dtiffn');
 
@@ -274,7 +279,8 @@ set(gca,'YTick',[0.1 0.3 0.5 0.7])
 set(gcf,'Position',[15 15 500 500 ]);
 
 
-title('  Exp 2c  ','fontsize',20,'fontweight','b');
+% title('  Exp 2c  ','fontsize',20,'fontweight','b');
+title('  Seq 3  ','fontsize',20,'fontweight','b');
 
 legend({'DDVT','Proposed','TLD mf', 'MI'},'fontsize',14,'location','NorthEast');
 set(gca,'fontsize',16) 
@@ -285,7 +291,7 @@ set(gca,'fontsize',16)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
              
 [M_Acc123 M_Thr123 Hist123 dist] = computeAccuracySigmaCurve(fullfile(rtpath, 'exp_test9.txt'), ...
-                              fullfile(rtpath, 'test_all.txt'),...
+                              fullfile(gtpath, 'test_all.txt'),...
                               -1,...
                               -1);
              
@@ -322,7 +328,7 @@ grid;
 legend({'Our Method','SCV [11]','MI [6]','SSD'},'fontsize',14,'location','SouthEast');
 set(gca,'fontsize',16) 
 
-%title('  Full Dataset  ','fontsize',20,'fontweight','b');
+title('  Seq 1 to 3  ','fontsize',20,'fontweight','b');
 
 print('exp1.tiff','-dtiffn');
 
@@ -360,7 +366,7 @@ grid;
 legend({'Our Method','SCV [11]','MI [6]'},'fontsize',14,'location','SouthEast');
 set(gca,'fontsize',16) 
 
-%title('  Exp2a to c  ','fontsize',20,'fontweight','b');
+title('  Seq 1 to 3  ','fontsize',20,'fontweight','b');
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

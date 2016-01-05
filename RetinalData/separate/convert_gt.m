@@ -1,8 +1,9 @@
 %
-%
+% Convert the DDVT format of bounding box to TLD format.
 %
 
-basepath = 'C:\Users\UTA\Research\Projects\Retinal Tracking\package\results';
+% basepath = 'C:\Users\UTA\Research\Projects\Retinal Tracking\package\results';
+basepath = fullfile('..', 'package', 'results');
 
 for i = 1:3
     initpos = dlmread(fullfile(['seq' num2str(i)], 'init.txt')); 
